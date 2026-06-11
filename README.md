@@ -23,16 +23,22 @@ An interactive machine learning app that predicts whether a telecom customer wil
 ## 📁 Project Structure
 
 ```
-churn-predictor/
-├── app.py                    # Streamlit app
-├── train_model.py            # Model training script (run once)
-├── Telco-Customer-Churn.csv  # Dataset
-├── requirements.txt          # Python dependencies
-├── model.pkl                 # Trained XGBoost model  (generated)
-├── encoders.pkl              # Label encoders         (generated)
-├── explainer.pkl             # SHAP TreeExplainer     (generated)
-├── feature_names.pkl         # Feature name list      (generated)
-└── README.md
+├── app.py                              # Streamlit app
+├── train_model.py                      # Model training script (run once)
+├── requirements.txt                    # Python dependencies
+├── README.md
+│
+├── data/
+│     └── Telco-Customer-Churn.csv      # Dataset
+│
+├── models/
+│     ├── model.pkl                     # Trained XGBoost model  (generated)
+│     ├── explainer.pkl                 # SHAP TreeExplainer     (generated)
+│     ├── encoders.pkl                  # Label encoders         (generated)
+│     └── feature_names.pkl             # Feature name list      (generated)
+│
+└── .streamlit/
+      └── config.toml
 ```
 
 ---
@@ -41,7 +47,7 @@ churn-predictor/
 
 ```bash
 # 1. Clone the repo
-git clone https://github.com/YOUR_USERNAME/churn-predictor.git
+git clone https://github.com/niyat4290/churn-predictor.git
 cd churn-predictor
 
 # 2. Create virtual environment
